@@ -8,6 +8,53 @@
 import SwiftUI
 import CoreData
 
+struct Todo: Identifiable, Hashable {
+    let id: Int
+    let title: String
+    let date: Date
+    let status: String
+}
+
+// Helper function to create Date instances from components
+func createDate(year: Int, month: Int, day: Int, hour: Int, minute: Int) -> Date {
+    var components = DateComponents()
+    components.year = year
+    components.month = month
+    components.day = day
+    components.hour = hour
+    components.minute = minute
+    components.timeZone = TimeZone.current
+    let calendar = Calendar.current
+    return calendar.date(from: components)!
+}
+
+
+struct TodoDetailView: View {
+    var todo: Todo
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(todo.title)
+                .font(.title)
+            Text(formatDate(todo.date))
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            Text(todo.status)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+        }
+        .padding()
+        .navigationTitle("Todo Details")
+    }
+
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
+    }
+}
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -19,6 +66,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
+                Text("Categories")
                 ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp!, formatter: itemFormatter)")

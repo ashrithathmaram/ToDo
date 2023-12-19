@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D15375232B322C9F00236A3D /* ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15375222B322C9F00236A3D /* ToDoApp.swift */; };
+		79E609542B323A2A002E3E5F /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E609532B323A2A002E3E5F /* ToDo.swift */; };
 		D15375252B322C9F00236A3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15375242B322C9F00236A3D /* ContentView.swift */; };
 		D15375272B322CA000236A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D15375262B322CA000236A3D /* Assets.xcassets */; };
 		D153752A2B322CA000236A3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D15375292B322CA000236A3D /* Preview Assets.xcassets */; };
@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79E609532B323A2A002E3E5F /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		D153751F2B322C9F00236A3D /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D15375222B322C9F00236A3D /* ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoApp.swift; sourceTree = "<group>"; };
 		D15375242B322C9F00236A3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D15375262B322CA000236A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D15375292B322CA000236A3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -55,12 +55,12 @@
 		D15375212B322C9F00236A3D /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				D15375222B322C9F00236A3D /* ToDoApp.swift */,
 				D15375242B322C9F00236A3D /* ContentView.swift */,
 				D15375262B322CA000236A3D /* Assets.xcassets */,
 				D153752B2B322CA000236A3D /* Persistence.swift */,
 				D153752D2B322CA000236A3D /* ToDo.xcdatamodeld */,
 				D15375282B322CA000236A3D /* Preview Content */,
+				79E609532B323A2A002E3E5F /* ToDo.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -144,8 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D153752C2B322CA000236A3D /* Persistence.swift in Sources */,
+				79E609542B323A2A002E3E5F /* ToDo.swift in Sources */,
 				D15375252B322C9F00236A3D /* ContentView.swift in Sources */,
-				D15375232B322C9F00236A3D /* ToDoApp.swift in Sources */,
 				D153752F2B322CA000236A3D /* ToDo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
